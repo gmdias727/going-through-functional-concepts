@@ -1,0 +1,4 @@
+(lang dune 3.6)
+(name church_numerals)
+(sections (lib .) (bin ../../bin))
+(files (lib (META dune-package opam)) (bin (church_numerals)))

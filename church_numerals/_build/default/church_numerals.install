@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/church_numerals/META"
+  "_build/install/default/lib/church_numerals/dune-package"
+  "_build/install/default/lib/church_numerals/opam"
+]
+bin: [
+  "_build/install/default/bin/church_numerals"
+]

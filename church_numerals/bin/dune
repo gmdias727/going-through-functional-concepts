@@ -1,0 +1,4 @@
+(executable
+ (public_name church_numerals)
+ (name main)
+ (libraries church_numerals))
