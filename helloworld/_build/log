@@ -1,10 +1,10 @@
-# dune build -w
+# dune build
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root:
-# /home/grandehe4rt/dev/going-through-functional-concepts/church_numerals
+# /home/grandehe4rt/dev/going-through-functional-concepts/helloworld
 # Auto-detected concurrency: 16
-$ /usr/bin/ocamlc.opt -config > /tmp/dune_00cc68_output
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_223c88_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -26,15 +26,15 @@ $ /usr/bin/ocamlc.opt -config > /tmp/dune_00cc68_output
 #        { "DUNE_OCAML_HARDCODED" : "/home/grandehe4rt/.opam/default/lib"
 #        ; "DUNE_OCAML_STDLIB" : "/usr/lib/ocaml"
 #        ; "DUNE_SOURCEROOT" :
-#            "/home/grandehe4rt/dev/going-through-functional-concepts/church_numerals"
+#            "/home/grandehe4rt/dev/going-through-functional-concepts/helloworld"
 #        ; "INSIDE_DUNE" :
-#            "/home/grandehe4rt/dev/going-through-functional-concepts/church_numerals/_build/default"
+#            "/home/grandehe4rt/dev/going-through-functional-concepts/helloworld/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/home/grandehe4rt/dev/going-through-functional-concepts/church_numerals/_build/install/default/lib"
+#            "/home/grandehe4rt/dev/going-through-functional-concepts/helloworld/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/home/grandehe4rt/dev/going-through-functional-concepts/church_numerals/_build/install/default/lib"
+#            "/home/grandehe4rt/dev/going-through-functional-concepts/helloworld/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/home/grandehe4rt/dev/going-through-functional-concepts/church_numerals/_build/install/default/lib/toplevel"
+#            "/home/grandehe4rt/dev/going-through-functional-concepts/helloworld/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
@@ -184,3 +184,9 @@ $ /usr/bin/ocamlc.opt -config > /tmp/dune_00cc68_output
 #      ; windows_unicode = false
 #      }
 #  }
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl bin/main.ml) > _build/default/bin/.main.eobjs/main.ml.d
+> File "bin/main.ml", line 10, characters 50-51:
+> 10 | val additive_primaries : colour * colour * colour = (Red, Green, Blue)
+>                                                        ^
+> Error: Syntax error
+[2]

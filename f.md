@@ -1,6 +1,6 @@
 # Church encoding
 
-# Church Numerals
+## Church Numerals
 Church numerals are the representations of *natural numbers* under Church encoding
 ```rs
 Number = (Number x) => x
@@ -40,7 +40,6 @@ let nat = (fn x) => nat(...nat(x))
 # 0
 ```rs
 let succ = (n f x) => f(n f x)
-
 let succ = (n f x) => f(f(n f x))
 
 let succ(0) =>
@@ -125,8 +124,6 @@ let zero = (f, x) => x;
 let number = (x) => x;
 let add = (m, n) => (f, x) => n(f, m(f, x))
 
-
-
 ```
 
 ---
@@ -162,14 +159,8 @@ let multiply = (m, n) => m*n
 <!-- Basicamente -->
 
 ```rs
-succ(3) = succ(succ(succ(x)))
-succ(4) = succ(succ(succ(succ(x))))
-
-multiply(m, n) = succ(3) * succ(4) => 12
+succ(2) = succ(succ(succ(x)))
+succ(3) = succ(succ(succ(succ(x))))
+multiply(m, n) = succ(2) * succ(3) => 12
 
 ```
-
-
-
-
-  

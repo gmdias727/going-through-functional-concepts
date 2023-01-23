@@ -1,0 +1,5 @@
+# dune init project church_numerals
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/grandehe4rt/dev/going-through-functional-concepts
+# Auto-detected concurrency: 16
