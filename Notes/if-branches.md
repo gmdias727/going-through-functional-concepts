@@ -72,13 +72,28 @@ add = λn. λm. λf. λx. n f (m f x)
 add = (λn. (λm. (λf. (λx. n f (m f x)))))
 add 0 1
 
-(λn. λm. λf. λx. n f (m f x) 0 1)
+(λn. λm. λf. λx. n f (m f x) (λf.λx.x) (λf.λx. f x))
 (λn. λm. λf. λx. n f (m f x) [n->0] 1)
 (λm. λf. λx. 0 f (m f x) 1)
 (λm. λf. λx. (λf.λx.x) f (m f x) 1)
 (λn. λm. λf. λx. (λf.λx.x) f (m f x) [m->1])
 (λf. λx. (λf.λx.x) f (1 f x))
 (λf. λx. (λf.λx.x) f ((λf.λx. f x) f x))
+(λx. (λf.λx.x) f ((λf.λx. f x) x))
+(λx. (λx.x) ((λf.λx. f x) x))
+
+
+(λf.λx. f x)
+add 0 1
+(λn. λm. λf. λx. n f (m f x) (λf.λx.x) (λf.λx. f x))
+1
+(λf.λx. f x)
+
+add 2 2
+(λn. λm. λf. λx. n f (m f x) λf.λx. f (f x) λf.λx. f (f x)) // add 2 2
+λf.λx. f (f (f (f x))) // 4
+
+λf.λx. f (f (f (f (f (f x))))) // 6
 
 ---
 (λx. ((λf.(λx. x)) (f x))) // edu

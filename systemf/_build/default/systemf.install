@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/systemf/META"
+  "_build/install/default/lib/systemf/dune-package"
+  "_build/install/default/lib/systemf/opam"
+]
+bin: [
+  "_build/install/default/bin/systemf"
+]

@@ -1,6 +1,5 @@
 Y = (λx. λy. y (x x y)) (λx. λy. y (x x y))
 
-
 # Y foo
 
 
